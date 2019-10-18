@@ -11,6 +11,7 @@ def lambda_handler(event:, context:)
         config.access_token_secret = ENV['ACCESS_TOKEN_SECRET']
     end
     
+    feeds = []
     feeds = ['https://www.soccercoachweekly.net/soccer-drills-and-skills/attacking/feed', 'https://www.goal.com/feeds/en/news', 'https://www.soccercoachweekly.net/feed', 'https://statsbomb.com/articles/feed/', 'https://www.coachesvoice.com/category/masterclass/feed/', 'https://www.coachesvoice.com/category/the-journey/feed/']
     
     latest_tweets = twitter.user_timeline('footballmisters')
